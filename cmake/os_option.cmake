@@ -1,0 +1,5 @@
+if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+	include(cmake/linux_config.cmake)
+else()
+	include(cmake/windows_config.cmake)
+endif()

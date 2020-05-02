@@ -1,0 +1,23 @@
+if (MYC_FOO_SUPPORT)
+	message(STATUS "Building foo support")
+	include_directories(foo)
+	file(GLOB FOO_SOURCES foo/*.c)
+	add_library(myc_foo ${FOO_SOURCES})
+endif()
+
+if (MYC_BOO_SUPPORT)
+	message(STATUS "Building boo support")
+	include_directories(boo)
+	file(GLOB BOO_SOURCES boo/*.c)
+	add_library(myc_boo ${BOO_SOURCES})
+endif()
+
+macro(config_libs)
+	if (MYC_FOO_SUPPORT)
+		set(MYC_LIBS ${MYC_LIBS} myc_foo)
+	endif()
+
+	if (MYC_BOO_SUPPORT)
+		set(MYC_LIBS ${MYC_LIBS} myc_boo)
+	endif()
+endmacro()

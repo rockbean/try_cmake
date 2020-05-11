@@ -1,4 +1,4 @@
-include(CMake/version_config.cmake)
+include(cmake/version_config.cmake)
 
 if(CCACHE_ENABLE)
 	find_program(CCACHE_FOUND ccache)

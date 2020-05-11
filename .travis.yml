@@ -1,0 +1,9 @@
+language: c
+os: linux
+compiler: gcc
+
+script: ./build.sh
+
+notifications:
+  email:
+    - caoxu3000@126.com

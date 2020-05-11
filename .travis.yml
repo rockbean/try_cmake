@@ -2,6 +2,8 @@ language: c
 os: linux
 compiler: gcc
 
+sudo: required
+
 script: ./build.sh
 
 notifications:
